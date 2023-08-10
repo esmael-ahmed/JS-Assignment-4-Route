@@ -16,7 +16,7 @@ let upMass = document.getElementById('signupMassage');
 
 document.getElementById("signup").addEventListener('click', function(e) {
 for (let i = 0; i <users.length; i++) {
-    if (users[i].userEmail == upEmail.value)
+    if (users[i].userEmail.toLowerCase() == upEmail.value.toLowerCase())
     {
         upMass.innerHTML = "the email is already registered";
         return;

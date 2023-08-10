@@ -19,7 +19,7 @@ document.getElementById('login').addEventListener('click',function(e) {
       }
     for (let i = 0; i < users.length; i++)
     {
-        if (users[i].userEmail == inEmail.value)
+        if (users[i].userEmail.toLowerCase() == inEmail.value.toLowerCase())
         {
             if (users[i].userPassword == inPassword.value)
             {
