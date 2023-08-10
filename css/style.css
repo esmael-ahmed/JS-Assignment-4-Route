@@ -1,0 +1,30 @@
+
+body, .main-div {
+    background-color: #24353F;
+}
+
+.main-div {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+
+h1, #welcomeMessage {
+    color: #17A2B8;
+    font-size: 2.5rem;
+}
+
+input, .btn {
+    background-color: transparent !important;
+}
+
+input::placeholder {
+    color: #B6B6B6 !important; ;
+}
+
+.btn:hover {
+    background-color: #17A2B8 !important;
+    color: white !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}

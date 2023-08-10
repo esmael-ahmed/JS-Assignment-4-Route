@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="helloNav position-fixed w-100 shadow-lg">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <p class="text-white fs-4 my-2">SMART LOGIN
+                </p>
+            </div>
+            <div>
+                <button id="logout" class="btn btn-warning my-2 text-white">Logout</button>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container vh-100 d-flex justify-content-center align-items-center">
+        <div class="w-75 mt-5 main-div text-center">
+            <div class=" m-auto py-3">
+                <h1>Welcome</h1>
+                <div id="welcomeMessage"></div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+           const urlParams = new URLSearchParams(window.location.search);
+           const username = urlParams.get('username');
+           const welcomeMessage = document.getElementById('welcomeMessage');
+           welcomeMessage.innerText = `Hello, ${username}!`;
+        });
+
+        document.getElementById('logout').addEventListener('click', function(e) {
+            window.location.href = `signin.html`;
+        })
+     </script>
+</body>
+</html>
