@@ -13,6 +13,10 @@ let inMass = document.getElementById('signinMassage');
 // console.log(hText.innerText);
 
 document.getElementById('login').addEventListener('click',function(e) {
+    if (users.length === 0) {
+        inMass.innerHTML = 'No users found. Please sign up.';
+        return;
+      }
     for (let i = 0; i < users.length; i++)
     {
         if (users[i].userEmail == inEmail.value)
