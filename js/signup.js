@@ -29,7 +29,7 @@ localStorage.setItem("usersList", JSON.stringify(users));
 upMass.classList.replace('text-danger', 'text-success');
 upMass.innerHTML = "Successfully registered";
 setTimeout(function () {
-    window.location.href = `signin.html`;
+    window.location.href = `index.html`;
 }, 2000);
 
 });
