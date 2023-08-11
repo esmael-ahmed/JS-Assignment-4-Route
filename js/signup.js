@@ -22,8 +22,9 @@ for (let i = 0; i <users.length; i++) {
         return;
     }
 }
-
-let user = {userName: upName.value, userEmail: upEmail.value, userPassword: upPassword.value}
+if (validEmail(upEmail.value))
+{
+    let user = {userName: upName.value, userEmail: upEmail.value, userPassword: upPassword.value}
 users.push(user);
 localStorage.setItem("usersList", JSON.stringify(users));
 upMass.classList.replace('text-danger', 'text-success');
@@ -31,7 +32,14 @@ upMass.innerHTML = "Successfully registered";
 setTimeout(function () {
     window.location.href = `index.html`;
 }, 2000);
+}
+else{
+    upMass.innerHTML = "Invalid email";
+}
 
 });
 
-console.log(users);
+function validEmail(email) {
+    let emailRegex = new RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+    return emailRegex.test(email);
+}
